@@ -5,7 +5,6 @@
 
 .dashboard__content {
     flex: 1; /* Take up the remaining space */
-    background-color: #fff;
     padding: 20px;
 }
 
@@ -14,19 +13,22 @@
 
 
 .navbarr {
-    display: flex;
-    align-items: center;
     padding: 10px 20px;
     background-color: #fff;
     color: #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     height: 100px;
     
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
-.navbar-search {
-}
+
 
 .navbar-searchh input {
     border-radius: 4px;

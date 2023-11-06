@@ -55,6 +55,10 @@ const router = createBrowserRouter([
             path: 'admin',
             element: <Admin />,
           },
+          {
+            path: 'all-articles',
+            element: <AllArticles />,
+          }
         ],
       },
 

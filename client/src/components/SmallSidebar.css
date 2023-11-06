@@ -18,6 +18,8 @@
     align-items: center;
     padding: 20px 0;
     height: 100vh;
+
+      
 }
 
 .small-sidebar h3 {
@@ -44,3 +46,39 @@
 .small-sidebar a:hover {
     color: #007BFF;
 }
+
+
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    display: grid;
+    place-items: center;
+  }
+  .active {
+    color: var(--primary-500);
+  }
+
+
+.nav-links {
+    padding-top: 2rem;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+
+  height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary-color);
+    padding: 1rem 0;
+    text-transform: capitalize;
+    transition: var(--transition);
+  }
+
+
+ 

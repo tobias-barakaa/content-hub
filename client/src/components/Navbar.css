@@ -1,0 +1,27 @@
+.btn-container {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+
+  .toggle-btn {
+    font-size: 1.75rem;
+    color: var(--primary-500);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+
+  @media (min-width: 992px) {
+  
+    .nav-center {
+      width: 90%;
+    }
+    .logo {
+      display: none;
+    }
+    .logo-text {
+      display: block;
+    }
+  }
