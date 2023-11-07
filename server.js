@@ -32,7 +32,7 @@ if(process.env.NODE_ENV === 'development') {
 
 
 app.use('/api/v1/articles',authenticateUser, articleRouter);
-app.use('/api/v1/auth', authRouter);
+app.use('/api/v1', authRouter);
 app.use('/api/v1/users', authenticateUser, userRouter);
 
 
