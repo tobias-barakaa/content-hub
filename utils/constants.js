@@ -58,7 +58,8 @@ export const PUBLISH = {
 }
 
 export const QUANTITY = {
-    NumberOfArticle: 56
+    RANGE_START: 1,
+    RANGE_END: 30
     
 }
 

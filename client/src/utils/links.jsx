@@ -7,7 +7,7 @@ import { MdAdminPanelSettings } from 'react-icons/md';
 
 const links = [
   {
-    text: 'add article',
+    text: 'order article',
     path: '.',
     icon: <FaWpforms />,
   },

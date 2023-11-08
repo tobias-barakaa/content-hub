@@ -8,9 +8,10 @@ const Navbar = () => {
   return (
     <div className="navbarr">
       <div className="nav-center">
-        <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+        {/* <button type="button" className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignLeft />
-        </button>
+        </button> */}
+        <h6>Ox gang</h6>
       </div>
       <div className="navbar-searchh">
         <input type="text" placeholder="search article" />

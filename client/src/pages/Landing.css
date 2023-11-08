@@ -35,7 +35,7 @@
   }
   
   .navbar-right .get-started {
-    background-color: #3498db;
+    background-color: #7EC8E3;
     border-radius: 1px;
     padding: 8px 15px;
     margin-left: auto; /* Keep the "Get Started" button on the end */
@@ -72,8 +72,8 @@
   
   .right-wing {
     width: 50%;
-    background-color: #ffffff;
-    height: 300px;
+    background-color: #7EC8E3;
+    height: 100vh;
   
   }
   
@@ -123,9 +123,9 @@
   
   
   .buttonn {
-    background-color: #007bff;
+    background-color: #7EC8E3;
     color: white;
-    border: 1px solid #007bff;
+   
     padding: 10px 20px;
     cursor: pointer;
     margin-left: 20%;
@@ -214,4 +214,9 @@
 .divv{
     margin-top: 8%;
    
+}
+
+
+.space {
+  color: #7EC8E3;
 }

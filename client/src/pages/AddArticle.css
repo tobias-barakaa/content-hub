@@ -1,0 +1,87 @@
+.add-article-form {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 10%;
+    height: auto;
+  }
+  
+  .center-form {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    float: right;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  option {
+    cursor: pointer;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Fancy CSS */
+  
+  .add-article-form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* select {
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+  } */
+  
+  .option:hover {
+    background-color: #eee;
+  }
+  
+  button {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+  
+
+  .add-article-form {
+    height: auto; /* Set a specific height or use 'auto' to make the card longer as needed */
+  }
+  
+  /* Custom dropdown style */
+  select {
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  option:hover {
+    background-color: #eee;
+  }

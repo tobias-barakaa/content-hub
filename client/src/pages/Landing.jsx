@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 
 const Landing = () => {
   return (
+    <>
     <div>
 <Navbar />
 
@@ -14,7 +15,7 @@ const Landing = () => {
   <div className="left-wing">
  
   <header className='header'>
-    <div>Welcome to Our Website</div>
+    <div>Welcome to Our <span className='space'> Website</span></div>
   </header>
   <div>
     <span>
@@ -29,24 +30,19 @@ const Landing = () => {
    <div className='divv'>
       <Link to='/register' className='buttonn'>CLICK TO GET STARTED</Link>
    </div>
-      
-
     
   </div>
   </div>
   <div className="right-wing">
 
-<img src={content} alt='preview' className='con' />
-
-
-
-<div class="vertical-lin"></div>
-
 
   </div>
 </div>
 
+
     </div>
+
+    </>
   )
 }
 
