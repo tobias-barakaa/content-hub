@@ -1,0 +1,52 @@
+.conn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    padding-top: 3%;
+    margin: 0;
+    
+}
+
+.topic {
+    color: #050A30;
+    font-size: 220%;
+    width: 30%;
+    font-weight: bolder;
+}
+
+.cardd {
+    
+    margin-right: 4px; /* 4px spacing between cards */
+    text-align: center;
+    border-radius: 4px; /* Optional: Add border-radius for a softer appearance */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 35vh;
+    width: 40vh;
+    margin-left: 3%;
+    margin-top: 4%;
+    background-color: #ffffff;
+
+}
+
+.cardd:last-child {
+    margin-right: 0; /* Remove margin for the last card */
+}
+
+.list-ul {
+    list-style-type: none;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.ull {
+    background-color: #7EC8E3;
+    color: white;
+}
+
+.sec-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-left: 34%;
+}
+
+
