@@ -1,0 +1,14 @@
+.companies {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.blog {
+    width: 190px;
+    margin: auto;
+    height: 150px;
+    padding: 20px;
+    
+}

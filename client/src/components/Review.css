@@ -1,0 +1,117 @@
+.review {
+    margin-top: 1%;
+  }
+
+  .elem-review {
+    font-size: 15px;
+  }
+
+
+  /* css */
+
+  .product-card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 40%;
+    margin-top: 60px;
+    margin-left: 20px;
+    height: 30vh;
+
+}
+
+.product-image {
+    width: 90%;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+
+}
+
+.product-image img {
+    max-width: 80%;
+    margin-top: -5%;
+
+
+    width: 80px; /* Adjust the width and height as needed */
+    border-radius: 50%; /* This is the magic line for creating a circle */
+    object-fit: cover;
+}
+
+.product-title {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.add-to-cart-btn,
+.view-btn {
+    background-color: cornflowerblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+}
+
+.add-to-cart-btn:hover,
+.view-btn:hover { 
+    opacity: 0.8;
+}
+
+.display {
+    display: flex;
+}
+
+.namee {
+    margin-top: 3%;
+    padding: 10px;
+
+}
+
+
+.product-car {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    height: 50vh;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+
+.product-cad {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    height: 50vh;
+    margin-top: -100px;
+    margin-left: 20px;
+}
+
+.product-ca {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    height: 40vh;
+    margin-left: 20px;
+}
