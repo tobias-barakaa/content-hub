@@ -14,9 +14,7 @@ const Navbar = () => {
         </button> */}
         <h6 className="ox-gang">Ox gang</h6>
       </div>
-      <div className="navbar-searchh">
-        <input type="text" placeholder="search article" />
-      </div>
+     
       <div
         className="btn-container"
         onClick={logoutUser}

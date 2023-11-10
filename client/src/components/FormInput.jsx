@@ -1,9 +1,12 @@
 import React from "react";
 import "./FormInput.css";
 
+
 const FormInput = ({ type, name, labelText, defaultValue, onChange }) => {
   return (
-    
+    <div>
+
+
       <div className="form-group">
         <label htmlFor={name} for="name">
           {labelText || name}
@@ -17,6 +20,8 @@ const FormInput = ({ type, name, labelText, defaultValue, onChange }) => {
           required
         />
       </div>
+    </div>
+
     
   );
 };

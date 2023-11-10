@@ -1,5 +1,13 @@
 import React from 'react'
 import tobby from '../assets/tobby.png'
+import formimage from '../assets/form-image.png'
+import com from '../assets/companies/echologoblue.png'
+import zelis from '../assets/companies/zelisline.png'
+import media from '../assets/companies/mediamasses.png'
+
+
+
+
 import "./Review.css";
 const Review = () => {
   return (
@@ -20,7 +28,7 @@ const Review = () => {
 <div className='display'>
 <div class="product-card">
     <div class="product-image">
-      <img src={tobby} alt="Product Image" />
+      <img src={zelis} alt="Product Image" />
       <strong><h5 className='namee'>Tobby baraka,</h5></strong>
 
     </div>
@@ -37,7 +45,7 @@ const Review = () => {
 
   <div class="product-car">
     <div class="product-image">
-      <img src={tobby} alt="Product Image" />
+      <img src={com} alt="Product Image" />
       <strong><h5 className='namee'>Tobby baraka,</h5></strong>
 
     </div>
@@ -88,7 +96,7 @@ const Review = () => {
 <div className='display'>
 <div class="product-cad">
     <div class="product-image">
-      <img src={tobby} alt="Product Image" />
+      <img src={formimage} alt="Product Image" />
       <strong><h5 className='namee'>Tobby baraka,</h5></strong>
 
     </div>
@@ -105,7 +113,7 @@ const Review = () => {
 
   <div class="product-ca">
     <div class="product-image">
-      <img src={tobby} alt="Product Image" />
+      <img src={com} alt="Product Image" />
       <strong><h5 className='namee'>Tobby baraka,</h5></strong>
 
     </div>
@@ -127,7 +135,7 @@ const Review = () => {
 
   <div class="product-cad">
     <div class="product-image">
-      <img src={tobby} alt="Product Image" />
+      <img src={zelis} alt="Product Image" />
       <strong><h5 className='namee'>Tobby baraka,</h5></strong>
 
     </div>

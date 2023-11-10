@@ -20,12 +20,7 @@ const DashboardLayout = () => {
   const navigate = useNavigate();
   const {user} = useLoaderData();
    const [showSidebar, setShowSidebar] = useState(false);
-  // const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-
-  // const toggleDarkTheme = () => {
-  //   // console.log('toggle dark theme');
-  // }
+ 
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar)
@@ -42,7 +37,14 @@ const DashboardLayout = () => {
     >
 
    
-    <div>
+    <div className='container'>
+    <div className="navbar-searchh">
+        <input type="text" placeholder="search article" />
+      </div>
+    <div class="divline"></div>
+
+    <div class="horizontal-line"></div>
+
       <div> 
 
       <Navbar />
@@ -52,7 +54,7 @@ const DashboardLayout = () => {
         <BigSidebar />
         <div>
           
-          <div className='dashboard__content'> 
+          <div className=''> 
           <Outlet context={{user}}/>
           </div>
         </div>

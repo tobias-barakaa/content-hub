@@ -4,6 +4,8 @@ import "./Register.css";
 import { FormInput } from "../components";
 import { Form, redirect, useNavigation } from "react-router-dom";
 import customFetch from "../utils/customFetch";
+import formimage from "../assets/form-image.png"
+
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -31,9 +33,12 @@ const Register = () => {
 
 
   return (
+    <div className="form-image">
+<img src={formimage} alt="formimage" className="imgg" /> 
+    
     <div className="global">
       <div class="signup-container">
-        <h2>Sign Up</h2>
+        <h2>Register to Ox-gang</h2>
         <Form method="post">
           <FormInput
             type="text"
@@ -69,6 +74,8 @@ const Register = () => {
         <Link to="/login">Login</Link>
       </div>
     </div>
+    </div>
+
   );
 };
 
