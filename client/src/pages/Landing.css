@@ -1,12 +1,14 @@
 .content-hub {
     margin-left: 20px; /* Adjust the margin as needed */
+    color: #000000;
   }
   
   .navbar {
     justify-content: space-between;
     box-shadow: 0 0 3px 1px lightgrey;
     padding: 10px;
-    background-color: #050A30;
+    /* background-color: #050A30; */
+    background-color: #ffffff;
     color: #ffffff;
   }
   
@@ -18,7 +20,7 @@
   
   .navbar-right a, .navbar-right .dropdown-content a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     
     
   }

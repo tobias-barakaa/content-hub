@@ -12,6 +12,9 @@
     align-items: center;
   }
 
+  .ox-gang {
+    color: #ffffff;
+  }
 
   @media (min-width: 992px) {
   

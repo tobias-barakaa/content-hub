@@ -3,6 +3,7 @@ import { FaAlignLeft } from "react-icons/fa";
 import "./Navbar.css";
 import { userDashboardContext } from "../pages/DashboardLayout";
 
+
 const Navbar = () => {
   const { toggleSidebar, user, logoutUser } = userDashboardContext();
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
         {/* <button type="button" className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignLeft />
         </button> */}
-        <h6>Ox gang</h6>
+        <h6 className="ox-gang">Ox gang</h6>
       </div>
       <div className="navbar-searchh">
         <input type="text" placeholder="search article" />
