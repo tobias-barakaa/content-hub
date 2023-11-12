@@ -35,23 +35,35 @@ const DashboardLayout = () => {
     <DashboardContext.Provider
     value={{user, showSidebar, toggleSidebar, logoutUser}}
     >
+<div className='container nav-center'>
+      
+       <h3 className="ox-gang">Ox gang</h3>
 
-   
-    <div className='container'>
-    <div className="navbar-searchh">
         <input type="text" placeholder="search article" />
-      </div>
-    <div class="divline"></div>
+        
+        <button className='logout'
+        onClick={logoutUser}
+      >
+        Logout
+      </button>
 
-    <div class="horizontal-line"></div>
+</div>
 
-      <div> 
+
+<div class="horizontal-line" />
+
+  <div className='container'>
+   
+   <div> 
 
       <Navbar />
       </div>
       <main className='dashboard'>
         <SmallSidebar />
+        <div className='bigsidebar'>
         <BigSidebar />
+
+        </div>
         <div>
           
           <div className=''> 

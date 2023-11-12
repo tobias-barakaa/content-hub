@@ -9,16 +9,21 @@ const NavLinks = () => {
         // const { role } = user;
         // if (path === 'admin' && role !== 'admin') return;
         return (
-          <NavLink
+          <aside 
+          className={`sidebar-link`}
+          
+          >
+             <NavLink
             to={path}
             key={text}
-            className='nav-link'
-            // onClick={isBigSidebar ? null : toggleSidebar}
+             // onClick={isBigSidebar ? null : toggleSidebar}
             end
           >
             <span className='icon'>{icon}</span>
             {text}
           </NavLink>
+            </aside>
+         
         );
       })}
     </div>

@@ -1,4 +1,4 @@
-.add-article-form {
+/* .add-article-form {
     width: 800px;
     margin: auto;
     padding: 20px;
@@ -41,13 +41,13 @@
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-  }
+  } */
   
   /* Fancy CSS */
   
-  .add-article-form {
+  /* .add-article-form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+  } */
   
   /* select {
     background-color: #fff;
@@ -56,7 +56,7 @@
     font-size: 16px;
   } */
   
-  .option:hover {
+  /* .option:hover {
     background-color: #eee;
   }
   
@@ -69,11 +69,11 @@
   
 
   .add-article-form {
-    height: auto; /* Set a specific height or use 'auto' to make the card longer as needed */
-  }
+    height: auto; 
+  } */
   
   /* Custom dropdown style */
-  select {
+  /* select {
     background-color: #fff;
     color: #000;
     font-family: sans-serif;
@@ -84,4 +84,37 @@
   
   option:hover {
     background-color: #eee;
+  } */
+
+
+  /* Container for the horizontal box-like input */
+/* General styling for larger screens */
+.input-container {
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.input-partition {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 20pc;
+}
+
+.input-partition.active {
+  background-color: black;
+  color: white;
+}
+
+.order-article {
+  padding-left: 9%;
+  margin-top: 30px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .input-partition {
+    width: 10pc;
   }
+}

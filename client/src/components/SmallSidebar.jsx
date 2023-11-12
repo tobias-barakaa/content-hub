@@ -7,11 +7,10 @@ import { userDashboardContext } from '../pages/DashboardLayout';
 
 const SmallSidebar = () => {
   const data = userDashboardContext();
-  console.log(data);
   return (
     <div>
-     <aside class="">
-       <NavLinks className="" />
+     <aside>
+       <NavLinks />
                   
         </aside>
     </div>

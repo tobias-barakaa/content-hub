@@ -1,14 +1,22 @@
 .dashboard {
-    flex: 1;
+  margin-top: 20px;
 }
 
 .nav-links {
-  width: 200px;
+  width: 150px;
   color: #000000;
-
+  border: 1px solid #ccc;
   height: 100vh;
+}
 
-    flex-direction: column;
-  }
 
- 
+.sidebar-link {
+  font-size: 200%;
+  color: black;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.sidebar-link span.icon {
+  margin-right: 10px; /* Adjust this value to set the desired space between icon and text */
+}
