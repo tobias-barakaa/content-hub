@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Form, useNavigation, redirect } from 'react-router-dom';
+import ProgressBar from '../components/ProgressBar';
+import './AddArticle.css';
+import PersonalTest from '../components/PersonalTest';
+import OtherInfoTest from '../components/OtherInfoTest';
+import OSignupTest from '../components/OSignupTest';
 
 
 const AddArticle = () => {
@@ -53,8 +58,79 @@ const AddArticle = () => {
 //       </option>
 //     );
 //   }
+const [page, setPage] = useState(0);
+const FormTitles = ['Order Article', 'Choose quantity', 'Finish'];
 
+const pageDisplay = () => {
+  if (page === 0) { return <PersonalTest /> 
+} else if(page === 1) {return <OtherInfoTest />}
+else  {return <OSignupTest />
+
+} 
+}
+
+const [formData, setFormData] = useState({
+  email: "",
+  password: "",
+  confirmPassword: "",
+})
   return (
+
+
+    <div className='order'>
+ <div className="input-container">
+    
+  <div className={`input-partition ${page === 0 ? 'active' : ''}`}>Order Article</div>
+  <div className={`input-partition ${page === 1 ? 'active' : ''}`}>choose Quantity</div>
+  <div className={`input-partition ${page === 2 ? 'active' : ''}`}>Payment</div>
+  
+
+
+    </div>
+
+    <div>
+   
+    <Form>
+      {pageDisplay()}
+    </Form>
+
+   <div className='navigate'>       
+<button className={`${page === 0 ? 'button-container' : ''}`}
+disabled = {page == 0}
+onClick={() => {setPage((currentPage) => currentPage - 1)}}>
+  {page == 0 ? '' : 'Prev'}
+</button>
+  <button 
+  
+  disabled = {page == FormTitles.length - 1} 
+  onClick={() => 
+  {setPage((currentPage) => currentPage + 1)}}>Next
+    </button>
+    </div>
+   
+ 
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // <div>
     //   <Form method='post' className='add-article-form' onSubmit={handleFormSubmit}>
     //     <h4>Add Article</h4>
@@ -133,19 +209,9 @@ const AddArticle = () => {
     //     </button>
     //   </Form>
     // </div>
-    <div className='order-article'>
-    <h2>Order Article</h2>
-
-    <div className="input-container">
-  <div className="input-partition active">Option 1</div>
-  <div className="input-partition">Option 2</div>
-  <div className="input-partition">Option 3</div>
-</div>
-
-    </div>
+   
   );
-};
-
+}
 export default AddArticle;
 
 

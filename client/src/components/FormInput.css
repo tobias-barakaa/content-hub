@@ -38,6 +38,7 @@ label {
 input {
   width: 200%; 
   padding: 10px;
+  background-color: transparent;
   border: 1px solid #ccc;
   font-size: 14px;
   height: 100%; 
