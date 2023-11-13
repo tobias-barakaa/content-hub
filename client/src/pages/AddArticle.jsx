@@ -59,6 +59,15 @@ const AddArticle = () => {
 //   }
 const [page, setPage] = useState(0);
 const FormTitles = ['Order Article', 'Choose quantity', 'Finish'];
+const [formData, setFormData] = useState({
+  title: "",
+  keywords: "",
+  description: "",
+  numberOfArticles: 0,
+  numberOfWords: 0,
+  totalCost:0,
+  timeFrame:0,
+})
 
 const pageDisplay = () => {
   if (page === 0) { return <PersonalTest /> 
