@@ -1,13 +1,100 @@
-import React, { useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
-import { Form, useNavigation, redirect } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Form, useNavigation } from 'react-router-dom';
 import './AddArticle.css';
-import PersonalTest from '../components/OrderArticle';
-import OtherInfoTest from '../components/Quantity';
+import OrderArticle from '../components/OrderArticle';
+import Quantity from '../components/Quantity';
 import TimeFrame from '../components/TimeFrame';
 
+// ... (other imports and code)
 
 const AddArticle = () => {
+  const [page, setPage] = useState(0);
+  const FormTitles = ['Order Article', 'Choose Quantity', 'Finish'];
+  const [formData, setFormData] = useState({
+    title: "",
+    keywords: "",
+    description: "",
+    numberOfArticles: 0,
+    numberOfWords: 0,
+    totalCost: 0,
+    timeFrame: "",
+  });
+
+  const navigation = useNavigation();
+
+  // Log form data whenever it changes
+  useEffect(() => {
+    console.log('Form Data (in AddArticle):', formData);
+  }, [formData]);
+
+  const pageDisplay = () => {
+    switch (page) {
+      case 0:
+        return <OrderArticle setFormData={setFormData} formData={formData} />;
+      case 1:
+        return <Quantity setFormData={setFormData} formData={formData} />;
+      case 2:
+        return <TimeFrame setFormData={setFormData} formData={formData} />;
+      default:
+        return null;
+    }
+  };
+
+  const handlePrevClick = () => {
+    setPage((currentPage) => currentPage - 1);
+  };
+
+  const handleNextClick = () => {
+    setPage((currentPage) => currentPage + 1);
+  };
+
+  const handleSubmit = () => {
+    // Perform logic to send formData to the server
+    console.log('Form Data (on Submit):', formData);
+    // Redirect or navigate to the next page or wherever needed
+    // navigation.navigate('/success'); 
+  };
+
+  return (
+    <div className='order'>
+      <div className="input-container">
+        {FormTitles.map((title, index) => (
+          <div key={index} className={`input-partition ${page === index ? 'active' : ''}`}>
+            {title}
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <div>
+          {pageDisplay()}
+        </div>
+        <Form>
+          <div className='navigate'>
+            <button
+              className={`${page === 0 ? 'button-container' : ''}`}
+              disabled={page === 0}
+              onClick={handlePrevClick}
+            >
+              {page === 0 ? '' : 'Prev'}
+            </button>
+            <button
+            
+              disabled={page === FormTitles.length - 1}
+              onClick={page === FormTitles.length - 1 ? handleSubmit : handleNextClick}
+            >
+              {page === FormTitles.length - 1 ? 'Submit' : 'Next' && page === FormTitles.length - 1 ? type="submit" : 'Submit'}
+            </button>
+          </div>
+        </Form>
+      </div>
+    </div>
+  );
+};
+
+export default AddArticle;
+
+
 // import "./AddArticle.css";
 // import {
 //   ARTICLE_TYPE,
@@ -57,64 +144,7 @@ const AddArticle = () => {
 //       </option>
 //     );
 //   }
-const [page, setPage] = useState(0);
-const FormTitles = ['Order Article', 'Choose quantity', 'Finish'];
-const [formData, setFormData] = useState({
-  title: "",
-  keywords: "",
-  description: "",
-  numberOfArticles: 0,
-  numberOfWords: 0,
-  totalCost:0,
-  timeFrame:0,
-})
 
-const pageDisplay = () => {
-  if (page === 0) { return <PersonalTest /> 
-} else if(page === 1) {return <OtherInfoTest />}
-else  {return <TimeFrame />
-
-} 
-}
-
-  return (
-
-
-    <div className='order'>
- <div className="input-container">
-    
-  <div className={`input-partition ${page === 0 ? 'active' : ''}`}>Order Article</div>
-  <div className={`input-partition ${page === 1 ? 'active' : ''}`}>choose Quantity</div>
-  <div className={`input-partition ${page === 2 ? 'active' : ''}`}>Payment</div>
-  
-
-
-    </div>
-
-    <div>
-   
-    <Form>
-      {pageDisplay()}
-    </Form>
-
-   <div className='navigate'>       
-<button className={`${page === 0 ? 'button-container' : ''}`}
-disabled = {page == 0}
-onClick={() => {setPage((currentPage) => currentPage - 1)}}>
-  {page == 0 ? '' : 'Prev'}
-</button>
-  <button 
-  
-  disabled = {page == FormTitles.length - 1} 
-  onClick={() => 
-  {setPage((currentPage) => currentPage + 1)}}>Next
-    </button>
-    </div>
-   
- 
-  </div>
-
-  </div>
 
 
     // <div>
@@ -195,9 +225,4 @@ onClick={() => {setPage((currentPage) => currentPage - 1)}}>
     //     </button>
     //   </Form>
     // </div>
-   
-  );
-}
-export default AddArticle;
-
-
+  

@@ -55,7 +55,8 @@
 import React, { useState, useEffect } from 'react';
 import './Quantity.css';
 
-const Quantity = () => {
+
+const Quantity = ({ formData, setFormData }) => {
   const [numberOfWords, setNumberOfWords] = useState(
     localStorage.getItem('numberOfWords') || ''
   );
@@ -72,11 +73,14 @@ const Quantity = () => {
     const costPerWord = 5 / 300;
     const total = (numberOfArticles * numberOfWords * costPerWord).toFixed(2);
     setTotalCost(total);
+
+    // Log the formData for debugging
+    console.log('formData in Quantity:', formData);
   }
 
   const handleInputChange = (key, value) => {
     if (value < 0) {
-      return; // Prevent negative values
+      return; // Don't allow negative numbers
     }
 
     if (key === 'numberOfWords') {
@@ -86,6 +90,12 @@ const Quantity = () => {
       setNumberOfArticles(value);
       localStorage.setItem('numberOfArticles', value);
     }
+
+    
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [key]: value,
+    }));
   };
 
   return (
@@ -93,8 +103,8 @@ const Quantity = () => {
       <label htmlFor="num-words">Number of Words:</label>
       <input
         type="number"
-        id="num-words"
-        name="num-words"
+        id="numberOfWords"
+        name="numberOfWords"
         min="0"
         placeholder="Enter the number of words..."
         value={numberOfWords}
