@@ -1,0 +1,27 @@
+
+select {
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+  }
+.duration {
+    margin-top: 20px;
+}
+  select:hover {
+    background-color: #fff; /* Prevent blue hover color */
+    
+  }
+  
+  select option {
+    padding: 5px;
+    border: 1px solid #ccc;
+    
+  }
+  
+  select option:hover {
+   background-color: green;
+  }

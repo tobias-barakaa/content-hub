@@ -4,14 +4,18 @@ import FormInput from './FormInput'
 const PersonalTest = () => {
   return (
     <div>
-      <div className='input-form'>
-      <label for="description">Title:</label>
-        <FormInput />
-      <label for="description">Keywords:</label>
-        <FormInput />
+      <div>
+     
 
-        <div class="description-form">
+        <div className="description-form">
         <form>
+        <label for="title">Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter the title..." />
+
+
+        <label for="keywords">Keywords:</label>
+      <input type="text" id="keywords" name="keywords" placeholder="Enter keywords separated by commas..." />
+
       <label for="description">Description:</label>
       <textarea id="description" name="description" placeholder="Enter your description here..."></textarea>
     </form>

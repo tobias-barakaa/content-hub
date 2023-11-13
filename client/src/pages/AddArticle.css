@@ -136,10 +136,7 @@
 } */
 
 
-.input-container {
-  display: flex;
-  border: 1px solid #ccc;
-}
+
 
 .input-partition {
   flex: 1;
@@ -149,13 +146,12 @@
 }
 
 .input-partition.active {
-  background-color: black;
+  background-color: #000000;
   color: white;
 }
 
 .order-article {
-  padding-left: 9%;
-  margin-top: 30px;
+  margin-top: 500px;
 }
 
 /* Media query for smaller screens */
@@ -191,41 +187,67 @@
 /* //// */
 
 .description-form {
-  max-width: 600px;
+  /* max-width: 600px;
   width: 400px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
+  padding: 0px;
+  background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px; */
+
+
+
+  max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
 }
 
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 17px;
+
 }
 
-textarea {
+input,
+textarea[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+#description {
+
+  background-color: transparent;
+
   width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  min-height: 100px;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      resize: vertical;
+
 }
+
 
 button {
-  background-color: #4caf50;
+  background-color: #000000;
   color: #fff;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #010801;
 }
+
+

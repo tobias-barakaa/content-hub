@@ -1,5 +1,6 @@
 .dashboard {
   margin-top: 30px;
+  
 }
 
 .nav-links {
@@ -11,12 +12,14 @@
 
 
 .sidebar-link {
-  font-size: 200%;
-  color: black;
+  font-size: 150%;
   margin-top: 20px;
   padding: 5px;
+  font-style: none;
+  
 }
 
 .sidebar-link span.icon {
   margin-right: 10px; /* Adjust this value to set the desired space between icon and text */
+  color: black;
 }

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavLinks = () => {
   return (
-    <div className='nav-links'>
+    <div className='nav-link'>
       {links.map((link) => {
         const { text, path, icon } = link;
         // const { role } = user;

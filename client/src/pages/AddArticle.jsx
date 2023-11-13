@@ -69,11 +69,6 @@ else  {return <OSignupTest />
 } 
 }
 
-const [formData, setFormData] = useState({
-  email: "",
-  password: "",
-  confirmPassword: "",
-})
   return (
 
 
