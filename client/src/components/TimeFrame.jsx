@@ -1,17 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './TimeFrame.css';
 
-const TimeFrame = () => {
-  const [selectedDuration, setSelectedDuration] = useState(
-    localStorage.getItem('selectedDuration') || ''
-  );
-
-  useEffect(() => {
-    
-    return () => {
-      localStorage.setItem('selectedDuration', selectedDuration);
-    };
-  }, [selectedDuration]);
+const TimeFrame = ({formData, setFormData}) => {
+  
 
   return (
     <div className='duration'>
@@ -19,8 +10,8 @@ const TimeFrame = () => {
       <select
         id="duration"
         name='duration'
-        value={selectedDuration}
-        onChange={(e) => setSelectedDuration(e.target.value)}
+        value={formData.duration}
+        onChange={(e) => setFormData({...formData, duration: e.target.value})}
       >
         {[1, 2, 3, 4, 5, 6, '1 week'].map((value) => (
           <option key={value} value={typeof value === 'number' ? `${value} days` : value}>

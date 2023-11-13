@@ -17,7 +17,7 @@ const AddArticle = () => {
     numberOfArticles: 0,
     numberOfWords: 0,
     totalCost: 0,
-    timeFrame: "",
+    duration: "",
   });
 
   const navigation = useNavigation();
@@ -52,10 +52,8 @@ const AddArticle = () => {
   };
 
   const handleSubmit = () => {
-    // Perform logic to send formData to the server
-    console.log('Form Data (on Submit):', formData);
-    // Redirect or navigate to the next page or wherever needed
-    // navigation.navigate('/success'); 
+    console.log("working")
+    
   };
 
   return (
@@ -83,10 +81,12 @@ const AddArticle = () => {
             </button>
             <button
             
-              disabled={page === FormTitles.length - 1}
+              
               onClick={page === FormTitles.length - 1 ? handleSubmit : handleNextClick}
-            >
-              {page === FormTitles.length - 1 ? 'Submit' : 'Next' && page === FormTitles.length - 1 ? type="submit" : 'Submit'}
+type={page === FormTitles.length - 1 ? "submit" : "button"}
+>
+{page === FormTitles.length - 1 ? 'Submit' : 'Next'}
+
             </button>
           </div>
         </Form>
