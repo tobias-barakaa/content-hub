@@ -30,7 +30,10 @@ const AddArticle = () => {
   const pageDisplay = () => {
     switch (page) {
       case 0:
-        return <OrderArticle setFormData={setFormData} formData={formData} />;
+        return <OrderArticle 
+        setFormData={setFormData} formData={formData}
+        
+        />;
       case 1:
         return <Quantity setFormData={setFormData} formData={formData} />;
       case 2:

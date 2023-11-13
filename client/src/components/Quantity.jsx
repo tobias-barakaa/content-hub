@@ -73,9 +73,6 @@ const Quantity = ({ formData, setFormData }) => {
     const costPerWord = 5 / 300;
     const total = (numberOfArticles * numberOfWords * costPerWord).toFixed(2);
     setTotalCost(total);
-
-    // Log the formData for debugging
-    console.log('formData in Quantity:', formData);
   }
 
   const handleInputChange = (key, value) => {
