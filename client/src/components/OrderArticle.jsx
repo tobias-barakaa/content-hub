@@ -1,7 +1,7 @@
 import React from 'react'
 import FormInput from './FormInput'
 
-const PersonalTest = () => {
+const OrderArticle = () => {
   return (
     <div>
       <div>
@@ -25,4 +25,4 @@ const PersonalTest = () => {
   )
 }
 
-export default PersonalTest
+export default OrderArticle

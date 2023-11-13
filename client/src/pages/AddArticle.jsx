@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Form, useNavigation, redirect } from 'react-router-dom';
-import ProgressBar from '../components/ProgressBar';
 import './AddArticle.css';
-import PersonalTest from '../components/PersonalTest';
-import OtherInfoTest from '../components/OtherInfoTest';
-import OSignupTest from '../components/OSignupTest';
+import PersonalTest from '../components/OrderArticle';
+import OtherInfoTest from '../components/Quantity';
+import TimeFrame from '../components/TimeFrame';
 
 
 const AddArticle = () => {
@@ -64,7 +63,7 @@ const FormTitles = ['Order Article', 'Choose quantity', 'Finish'];
 const pageDisplay = () => {
   if (page === 0) { return <PersonalTest /> 
 } else if(page === 1) {return <OtherInfoTest />}
-else  {return <OSignupTest />
+else  {return <TimeFrame />
 
 } 
 }
@@ -107,23 +106,6 @@ onClick={() => {setPage((currentPage) => currentPage - 1)}}>
   </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // <div>

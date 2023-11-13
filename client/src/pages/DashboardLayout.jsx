@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { BigSidebar, Navbar, SmallSidebar } from '../components'
+import { BigSidebar, SmallSidebar } from '../components'
 import { Outlet, redirect, useLoaderData, useNavigate } from 'react-router-dom';
 import "./DashboardLayout.css";
 import customFetch from '../utils/customFetch';
@@ -56,7 +56,6 @@ const DashboardLayout = () => {
    
    <div> 
 
-      <Navbar />
       </div>
       <main className='dashboard'>
         <SmallSidebar />
