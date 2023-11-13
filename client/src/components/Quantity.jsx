@@ -15,9 +15,10 @@ const Quantity = () => {
     const total = (numberOfArticles * numberOfWords * costPerWord).toFixed(2);
     setTotalCost(total);
   }
- 
 
-  return (
+  
+
+ return (
     <div className="payment-form">
       <label htmlFor="num-words">Number of Words:</label>
       <input
@@ -25,7 +26,6 @@ const Quantity = () => {
         id="num-words"
         name="num-words"
         min="0"
-        placeholder="Enter the number of words..."
         value={numberOfWords}
         onChange={(e) => setNumberOfWords(Math.max(0, parseInt(e.target.value, 10)))}
         required
@@ -36,12 +36,12 @@ const Quantity = () => {
         type="number"
         id="num-articles"
         name="num-articles"
-        placeholder="Enter the number of articles..."
-        min="0"
+         min="0"
         value={numberOfArticles}
         onChange={(e) => setNumberOfArticles(Math.max(0, parseInt(e.target.value, 10)))}
         required
       />
+
       <div className="total-cost-box">
         <p>Total Cost:</p>
         <p>${totalCost}</p>
