@@ -3,6 +3,7 @@ import customFetch from '../utils/customFetch';
 import SearchContainer from './SearchContainer';
 import { useLoaderData } from 'react-router-dom';
 import ArticleContainer from './ArticleContainer';
+import './AllArticles.css';
 
 
 
@@ -27,8 +28,11 @@ const AllArticles = () => {
 
   return (
    <AllArticlesContext.Provider value={{data}}>
-      <SearchContainer />
+    
+    <SearchContainer />
       <ArticleContainer />
+     
+      
     </AllArticlesContext.Provider>
   )
 }

@@ -35,7 +35,7 @@ const DashboardLayout = () => {
     <DashboardContext.Provider
     value={{user, showSidebar, toggleSidebar, logoutUser}}
     >
-<div className='container nav-center'>
+{/* <div className='container nav-center'>
       
        <h3 className="ox-gang">Ox gang</h3>
 
@@ -47,6 +47,19 @@ const DashboardLayout = () => {
         Logout
       </button>
 
+</div> */}
+
+<div className='container nav-center'>
+  <div className="ox-gang-container">
+    <h3 className="ox-gang">Ox gang</h3>
+    <div className="logout-container">
+    <button className='logout' onClick={logoutUser}>
+      Logout
+    </button>
+  </div>
+  </div>
+
+  
 </div>
 
 

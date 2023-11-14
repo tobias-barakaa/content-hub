@@ -11,8 +11,8 @@
   
   .nav-center {
     font-size: 16px;
-margin-top: 40px;
-  display: flex;
+    
+
   }
 
   .nav-center input {
@@ -28,20 +28,38 @@ margin-top: 40px;
     height: 1px;
     background-color: #ccc;
   }
+  
   .logout {
-    width: 7%;
+    width: 8%;
     border-radius: 3px;
+    height: 5%;
     background-color: #f2f2f2;
     color: #000;
-    padding: 6px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    float: right;
   }
   
   .logout:hover {
     background-color: #000000;
     border: 1px solid #ccc;
     color: #ffffff;
+    height: 5%;
+    width: 15%;
+    
   }
+
+
+    
+  .ox-gang-container {
+    margin-right: auto; 
+    margin-top: 40px;
+
+  }
+  
+  .logout-container {
+
+  }
+  

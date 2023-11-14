@@ -1,6 +1,7 @@
 import React from 'react';
 import Article from './Article';
 import { useAllArticlesContext } from './AllArticles';
+import './ArticleContainer.css';
 
 const ArticleContainer = () => {
   const { data } = useAllArticlesContext();
@@ -27,9 +28,10 @@ const ArticleContainer = () => {
 
   return (
     <>
-      <div className='articles'>
+      <div className=''>
         {article.map((article) => (
           <Article key={article._id} {...article} />
+
         ))}
       </div>
     </>

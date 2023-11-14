@@ -1,0 +1,86 @@
+/* Overall container for article cards */
+.article-cards-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    padding: 10px;
+    margin-left: 90px;
+  }
+  
+  /* Individual article card */
+  .article-card {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px; /* Adjust spacing between cards */
+    min-width: 300px; /* Set minimum width for cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  /* Article card header */
+  .article-card__header {
+    display: flex;
+    justify-content: space-between; /* Distribute header elements horizontally */
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  /* Article title */
+  .article-card__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust title color */
+  }
+  
+  /* Article keywords */
+  .article-card__keyword {
+    font-size: 14px;
+    color: #999; /* Adjust keyword color */
+  }
+  
+  /* Article duration */
+  .article-card__time {
+    font-size: 12px;
+    color: #ccc; /* Adjust duration color */
+  }
+  
+  /* Article card content */
+  .article-card__content {
+    margin-bottom: 10px;
+  }
+  
+  /* Article info text */
+  .article-card__content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  
+  /* Article card buttons */
+  .article-card__buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 5px;
+  }
+  
+  /* Edit button */
+  .article-card__button--edit {
+    background-color: #007bff; /* Adjust edit button color */
+    color: #fff; /* Adjust edit button text color */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Delete button */
+  .article-card__button--delete {
+    background-color: #dc3545; /* Adjust delete button color */
+    color: #fff; /* Adjust delete button text color */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
