@@ -7,14 +7,6 @@ import {
 import mongoose from "mongoose";
 import Content from "../models/articleModel.js";
 import User from "../models/authModel.js";
-import {
-  ARTICLE_CATEGORY,
-  ARTICLE_TYPE,
-  AUTHORS_TONE,
-  FREQUENCY_SUB,
-  PUBLISH,
-  QUANTITY,
-} from "../utils/constants.js";
 
 const withValidationErrors = (validateValues) => {
   return [
@@ -49,26 +41,12 @@ export const validateArticleInput = withValidationErrors([
   body("description").notEmpty().withMessage("Description is required"),
   body("keywords").notEmpty().withMessage("keywords is required"),
   body("numOfWords").notEmpty().withMessage("number of words is required"),
-  body("keywords").notEmpty().withMessage("keywords is required"),
-  body("category")
-    .isIn(Object.values(ARTICLE_CATEGORY))
-    .withMessage("category required"),
-  body("authorsTone")
-    .isIn(Object.values(AUTHORS_TONE))
-    .withMessage("AUTHORS_TONE required"),
-  body("articleType")
-    .isIn(Object.values(ARTICLE_TYPE))
-    .withMessage("ARTICLE_TYPE required"),
-  body("quantity")
-    .isIn(Object.values(QUANTITY))
-    .withMessage("quantity required"),
-  body("frequency")
-    .isIn(Object.values(FREQUENCY_SUB))
-    .withMessage("FREQUENCY required"),
-  body("publishing")
-    .isIn(Object.values(PUBLISH))
-    .withMessage("publishing required"),
+  body("numberOfArticles").notEmpty().withMessage("number of articles is required"),
+  body("duration").notEmpty().withMessage("duration is required"),
+  body("totalCost").notEmpty().withMessage("total cost is required"),
+  body("title").notEmpty().withMessage("title is required"),
 ]);
+
 
 export const validateIdParam = withValidationErrors([
   param("id").custom(async (value, { req }) => {
