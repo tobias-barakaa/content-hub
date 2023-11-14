@@ -17,6 +17,7 @@ import {action as registerAction} from './pages/Register';
 import {action as loginAction} from './pages/Login';
 import {loader as dashboardLoader} from './pages/DashboardLayout';
 
+import {loader as allArticlesLoader} from './pages/AllArticles';
 
 
 const router = createBrowserRouter([
@@ -51,12 +52,7 @@ const router = createBrowserRouter([
             index: true,
             element: <AddArticle />,
           },
-           {
-            path: 'all-jobs',
-            element: <AllArticles />,
-          },
-
-          {
+            {
             path: 'profile',
             element: <Profile />,
           },
@@ -67,6 +63,7 @@ const router = createBrowserRouter([
           {
             path: 'all-articles',
             element: <AllArticles />,
+            loader: allArticlesLoader,
           }
         ],
       },

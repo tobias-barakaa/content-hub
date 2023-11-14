@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Form, useNavigation } from 'react-router-dom';
+import { Form, redirect, useNavigate, useNavigation } from 'react-router-dom';
 import './AddArticle.css';
 import OrderArticle from '../components/OrderArticle';
 import Quantity from '../components/Quantity';
 import TimeFrame from '../components/TimeFrame';
+import customFetch from '../utils/customFetch';
 
-// ... (other imports and code)
 
 const AddArticle = () => {
   const [page, setPage] = useState(0);
@@ -15,12 +15,12 @@ const AddArticle = () => {
     keywords: "",
     description: "",
     numberOfArticles: 0,
-    numberOfWords: 0,
+    numOfWords: 0,
     totalCost: 0,
     duration: "",
   });
 
-  const navigation = useNavigation();
+  const navigate = useNavigate();
 
   // Log form data whenever it changes
   useEffect(() => {
@@ -51,9 +51,25 @@ const AddArticle = () => {
     setPage((currentPage) => currentPage + 1);
   };
 
-  const handleSubmit = () => {
-    console.log("working")
-    
+
+
+
+  const handleSubmit = async () => {
+    try {
+      const data = formData;
+      await customFetch.post('/articles', data);
+
+      // Use the navigate function to navigate to the desired route
+      navigate('/dashboard/all-articles');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+
+      // Check if the error has a response with more details
+      if (error.response) {
+        console.error('Response data:', error.response.data);
+        console.error('Response status:', error.response.status);
+      }
+    }
   };
 
   return (

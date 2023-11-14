@@ -55,17 +55,16 @@
 import React, { useState, useEffect } from 'react';
 import './Quantity.css';
 
-
 const Quantity = ({ formData, setFormData }) => {
     const [totalCost, setTotalCost] = useState(0);
 
   useEffect(() => {
     calculate();
-  }, [formData.numberOfWords, formData.numberOfArticles]);
+  }, [formData.numOfWords, formData.numberOfArticles]);
   
   function calculate() {
     const costPerWord = 5 / 300;
-    const total = (formData.numberOfArticles * formData.numberOfWords * costPerWord).toFixed(2);
+    const total = (formData.numberOfArticles * formData.numOfWords * costPerWord).toFixed(2);
     setTotalCost(total);
 
     setFormData((prevFormData) => ({
@@ -100,15 +99,15 @@ const Quantity = ({ formData, setFormData }) => {
       <label htmlFor="num-words">Number of Words:</label>
       <input
         type="number"
-        id="numberOfWords"
-        name="numberOfWords"
+        id="numOfWords"
+        name="numOfWords"
         min="0"
         placeholder="Enter the number of words..."
-        value={formData.numberOfWords}
+        value={formData.numOfWords}
         onChange={(e) => {
           setFormData((prevFormData) => ({
             ...prevFormData,
-            numberOfWords: Math.max(0, parseInt(e.target.value, 10)),
+            numOfWords: Math.max(0, parseInt(e.target.value, 10)),
           }));
         }}
         
