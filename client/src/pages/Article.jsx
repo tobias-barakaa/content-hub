@@ -4,6 +4,8 @@ import day from 'dayjs';
 
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import ArticleInfo from './ArticleInfo';
+import { FaBriefcase, FaCalendarAlt, FaLocationArrow } from 'react-icons/fa';
+import { Form, Link } from 'react-router-dom';
 day.extend(advancedFormat);
 
 
@@ -12,54 +14,58 @@ const Article = ({
 }) => {
     const date = day(createdAt).format('MM Do YYYY');
   return (
-    // <div className='articles'>
-    //     <header>
-    //         <h2>{title}</h2>
-    //         <div className='description'>
-    //         <p>{description}</p>
-
-    //         </div>
-    //         <p>{keywords}</p>
-    //         <p>{numberOfArticles}</p>
-    //         <p>{numOfWords}</p>
-    //         <p>{totalCost}</p>
-    //         <p>{duration}</p>
-    //         <p>{date}</p>
-    //         <ArticleInfo _id={_id} />
-    //     </header>
-    // </div>
-
-//     <div className='articles container'>
+    <aside className='all'>  
+    <div className='articles'>
+    <header className='card-container'>
+      {/* Left section */}
+      <div className='left-section'>
+        <h2>{title}</h2>
+        <p>{keywords}</p>
+        <div className='description'>
+          <p>{description}</p>
+          <button className='read-more'>Read More</button>
+        </div>
+      </div>
   
-//     <div className='left-column'>
-//       <div className='titl'>{title}</div>
-//       <p>{keywords}</p>
-         
-//     </div>
-//     <div className='right-column'>
-//       <button>Delete</button>
-//       <button>Edit</button>
-//     </div>
- 
-// </div>
-<div className="article-cards-container">
-    <header>
-    <div className="article-card__header">
-      <h2 className="article-card__title">{title}</h2>
-      <p className="article-card__keyword">{keywords}</p>
-      <p className="article-card__time">{duration}</p>
-    </div>
+      {/* Vertical line */}
+      <div className='vertical-line'></div>
+  
+      {/* Center section */}
+      <div className='center-section'>
+        <div><span className='duration'>Duration:  </span>{duration}</div>
+        <span className='numOfWords'>Number of Words:
+          </span><ArticleInfo text={numOfWords} />
+        <span className='numOfWords'>Number of Articles
+          </span> 
+          <ArticleInfo text={numberOfArticles} />
+
+      </div>
+  
+      {/* Vertical line */}
+      <div className='vertical-line' />
+  
+      {/* Right section */}
+      <div className='right-section'>
+        <p>{totalCost}</p>
+        <p>{date}</p>
+        <button className='edit-button'>
+        <Link to={`../edit-article/${_id}`}>Edit</Link>
+          
+        </button>
+          <Form method='post' action={`../delete-article/${_id}`}>
+          <button className='delete-button'>
+            Delete
+            </button>
+          </Form>
+          <button className='read-more'>Read More</button>
+      </div>
     </header>
-    <div className='contentt'>
-        <ArticleInfo text={description} />
-        <ArticleInfo text={numberOfArticles} />
-        <ArticleInfo text={numOfWords} />
-    </div>
-    <div className="article-card__buttons">
-      <button className="article-card__button article-card__button--edit">Edit</button>
-      <button className="article-card__button article-card__button--delete">Delete</button>
   </div>
-  </div>
+  <div className='horizontal-line' />
+
+</aside>
+   
+
 
   )
 }

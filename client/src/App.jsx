@@ -11,6 +11,7 @@ import {
   AllArticles,
   Profile,
   Admin,
+  EditArticle,
 } from "./pages";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {action as registerAction} from './pages/Register';
@@ -18,6 +19,9 @@ import {action as loginAction} from './pages/Login';
 import {loader as dashboardLoader} from './pages/DashboardLayout';
 
 import {loader as allArticlesLoader} from './pages/AllArticles';
+import {loader as editArticleLoader} from './pages/EditArticle';
+import {action as editArticleAction} from './pages/EditArticle';
+import {action as deleteArticleAction} from './pages/DeleteArticle';
 
 
 const router = createBrowserRouter([
@@ -64,6 +68,17 @@ const router = createBrowserRouter([
             path: 'all-articles',
             element: <AllArticles />,
             loader: allArticlesLoader,
+          },
+          {
+            path: 'edit-article/:id',
+            element: <EditArticle />,
+            loader: editArticleLoader,
+            action: editArticleAction,
+
+          },
+          {
+            path: 'delete-article/:id',
+            action: deleteArticleAction,
           }
         ],
       },

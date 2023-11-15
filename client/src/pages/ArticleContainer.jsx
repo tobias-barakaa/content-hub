@@ -28,7 +28,7 @@ const ArticleContainer = () => {
 
   return (
     <>
-      <div className=''>
+      <div className='hey'>
         {article.map((article) => (
           <Article key={article._id} {...article} />
 

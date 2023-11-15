@@ -1,0 +1,45 @@
+.form-container {
+margin-left: 130px;    
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #description, #title, #keywords, #duration, #numOfWords, #numberOfArticles, #totalCost {
+    height: 50px;
+  }
+  
+  
+  .form-group label {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-group button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Split the form into two parts */
+  .form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .form-container form .form-group {
+    width: 30%;
+  }
+
+  
