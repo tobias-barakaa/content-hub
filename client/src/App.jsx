@@ -23,6 +23,7 @@ import {loader as editArticleLoader} from './pages/EditArticle';
 import {action as editArticleAction} from './pages/EditArticle';
 import {action as deleteArticleAction} from './pages/DeleteArticle';
 
+import {loader as adminLoader} from './pages/Admin';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
           {
             path: 'admin',
             element: <Admin />,
+            loader: adminLoader,
           },
           {
             path: 'all-articles',
