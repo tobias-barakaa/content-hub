@@ -10,11 +10,17 @@ import customFetch from '../utils/customFetch';
 const AddArticle = () => {
   const [page, setPage] = useState(0);
   const FormTitles = ['Order Article', 'Choose Quantity', 'Finish'];
+  const [showArticles, setShowArticles] = useState(false);
+
+  function NumberOArticles() {
+    if (showArticles === '')
+    setShowArticles(true);
+  }
   const [formData, setFormData] = useState({
     title: "",
     keywords: "",
     description: "",
-    numberOfArticles: 0,
+    numberOfArticles: 1,
     numOfWords: 0,
     totalCost: 0,
     duration: "",
@@ -100,7 +106,9 @@ const AddArticle = () => {
               
               onClick={page === FormTitles.length - 1 ? handleSubmit : handleNextClick}
 type={page === FormTitles.length - 1 ? "submit" : "button"}
+
 >
+  
 {page === FormTitles.length - 1 ? 'Submit' : 'Next'}
 
             </button>

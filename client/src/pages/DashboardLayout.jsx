@@ -1,41 +1,43 @@
-import React, { createContext, useContext, useState } from 'react'
-import { BigSidebar, SmallSidebar } from '../components'
-import { Outlet, redirect, useLoaderData, useNavigate } from 'react-router-dom';
+import React, { createContext, useContext, useState } from "react";
+import { BigSidebar, SmallSidebar, Navbar } from "../components";
+import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import "./DashboardLayout.css";
-import customFetch from '../utils/customFetch';
+import customFetch from "../utils/customFetch";
 
-
-export const loader = async() => {
+export const loader = async () => {
   try {
-    const {data} = await customFetch.get('/users/current-user');
+    const { data } = await customFetch.get("/users/current-user");
     return data;
   } catch (error) {
-    return redirect('/');
+    return redirect("/");
   }
-}
+};
 
 const DashboardContext = createContext();
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
-  const {user} = useLoaderData();
-   const [showSidebar, setShowSidebar] = useState(false);
- 
+  const { user } = useLoaderData();
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
-    setShowSidebar(!showSidebar)
-  }
+    setShowSidebar(!showSidebar);
+  };
 
   const logoutUser = async () => {
-   navigate('/');
-   await customFetch.get('/logout');
-  }
+    navigate("/");
+    await customFetch.get("/logout");
+  };
 
   return (
     <DashboardContext.Provider
-    value={{user, showSidebar, toggleSidebar, logoutUser}}
+      value={{ 
+        user,
+         showSidebar, 
+         toggleSidebar, 
+         logoutUser }}
     >
-{/* <div className='container nav-center'>
+      {/* <div className='container nav-center'>
       
        <h3 className="ox-gang">Ox gang</h3>
 
@@ -49,43 +51,27 @@ const DashboardLayout = () => {
 
 </div> */}
 
-<div className='container nav-center'>
-  <div className="ox-gang-container">
-    <h3 className="ox-gang">Ox gang</h3>
-    <div className="logout-container">
-    <button className='logout' onClick={logoutUser}>
-      Logout
-    </button>
-  </div>
-  </div>
+     
 
-  
-</div>
+      <div class="horizontal-line" />
 
-
-<div class="horizontal-line" />
-
-  <div className='container'>
-   
-   <div> 
-
-      </div>
-      <main className='dashboard'>
-        <SmallSidebar />
-        <div className='bigsidebar'>
-        <BigSidebar />
-
-        </div>
-        <div>
-          
-          <div className=''> 
-          <Outlet context={{user}}/>
+      <div className="dashboard">
+        <div></div>
+        <main className="dashboard">
+          <SmallSidebar />
+          <div className="bigsidebar">
+            <BigSidebar />
           </div>
-        </div>
-      </main>
-    </div>
+          <Navbar />
+          <div>
+            <div className="">
+              <Outlet context={{ user }} />
+            </div>
+          </div>
+        </main>
+      </div>
     </DashboardContext.Provider>
-  )
-}
+  );
+};
 export const userDashboardContext = () => useContext(DashboardContext);
-export default DashboardLayout
+export default DashboardLayout;

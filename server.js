@@ -1,4 +1,6 @@
 import 'express-async-errors';
+import cloudinary from 'cloudinary';
+
 
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -27,15 +29,23 @@ import path from 'path';
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
 import {authenticateUser} from './middleware/authMiddleware.js';
 
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_KEY,
+    api_secret: process.env.CLOUDINARY_SECRET
+})
+
+
+
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
-app.use(express.static(path.join(__dirname, './public')));
 if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 
 }
 
 
-
+app.use(express.static(path.join(__dirname, './public')));
 app.use('/api/v1/articles',authenticateUser, articleRouter);
 app.use('/api/v1', authRouter);
 app.use('/api/v1/users', authenticateUser, userRouter);
@@ -63,3 +73,4 @@ try {
     console.log(error);
     process.exit(1);
 }
+

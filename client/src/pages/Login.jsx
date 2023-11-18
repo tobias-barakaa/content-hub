@@ -23,12 +23,12 @@ const Login = () => {
 const navigate = useNavigate();
 const loginDemoUser = async () => {
   const data = {
-    email: 'tobbyy@gmail.com',
-    password: '12345678'
+    "email": "zippy@gmail.com",
+    "password": "secret123",
   }
   try {
     await customFetch.post('/login', data);
-    alert('take a test');
+    alert('take a look at ');
     navigate('/dashboard')    
   } catch (error) {
     alert('error');
@@ -55,6 +55,7 @@ const loginDemoUser = async () => {
         {isSubmitting ? 'Loading...' : 'Submit'}
         
         </button>
+        <button onClick={loginDemoUser}>Explore The App</button>
       </Form>
     <br />
 

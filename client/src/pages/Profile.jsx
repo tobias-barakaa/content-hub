@@ -7,10 +7,10 @@ import "./Profile.css";
 
 export const action = async ({request}) => {
   const formData = await request.formData();
-  const file = formData.get('avatar');
-  if(file && file.size > 50000) {
-    alert("image size too big");
-    return null
+  const file = formData.get('avatar') || null;
+  if (file && file.size > 50000) {
+  alert('Image size too big');
+  return null;
 }
 try {
   await customFetch.patch('/users/update-user', formData);
@@ -44,6 +44,7 @@ const Profile = () => {
             
             />
           </div>
+
           <FormInput type='text' name='name' labelText="name" defaultValue={name} />
           <FormInput type='text' labelText='last name' name='lastName' defaultValue={lastName} />
           <FormInput type='email' labelText='email' name='email' defaultValue={email} />

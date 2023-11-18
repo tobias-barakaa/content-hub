@@ -58,6 +58,7 @@ import './Quantity.css';
 const Quantity = ({ formData, setFormData }) => {
     const [totalCost, setTotalCost] = useState(0);
 
+    
   useEffect(() => {
     calculate();
   }, [formData.numOfWords, formData.numberOfArticles]);
@@ -74,25 +75,53 @@ const Quantity = ({ formData, setFormData }) => {
   }
   
 
-  // const handleInputChange = (key, value) => {
-  //   if (value < 0) {
-  //     return; // Don't allow negative numbers
-  //   }
+  
 
-  //   if (key === 'numberOfWords') {
-  //     setNumberOfWords(value);
-  //     localStorage.setItem('numberOfWords', value);
-  //   } else if (key === 'numberOfArticles') {
-  //     setNumberOfArticles(value);
-  //     localStorage.setItem('numberOfArticles', value);
-  //   }
 
-    
-  //   setFormData((prevFormData) => ({
-  //     ...prevFormData,
-  //     [key]: value,
-  //   }));
-  // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="payment-form">
@@ -126,7 +155,7 @@ const Quantity = ({ formData, setFormData }) => {
         onChange={(e) => {
           setFormData((prevFormData) => ({
             ...prevFormData,
-            numberOfArticles: Math.max(0, parseInt(e.target.value, 10)),
+            numberOfArticles: Math.max(1, parseInt(e.target.value, 10)),
           }));
         }}
         required

@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
 import { FormInput } from "../components";
-import { Form, redirect, useNavigation } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 import customFetch from "../utils/customFetch";
 import formimage from "../assets/form-image.png"
+import SubmitButton from "../components/SubmitButton";
 
 
 export const action = async ({ request }) => {
@@ -20,9 +21,7 @@ export const action = async ({ request }) => {
 };
 
 const Register = () => {
-  const navigation = useNavigation();
-  const isSubmitting = navigation.state === 'submitting';
-
+  
   
 
 
@@ -64,11 +63,7 @@ const Register = () => {
             labelText="Password"
             defaultValue="tobby12343"
           />
-          <button type="submit"
-          disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Loading...' : 'Submit'}
-            </button>
+          <SubmitButton />
         </Form>
 
         <Link to="/login">Login</Link>

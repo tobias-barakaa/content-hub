@@ -80,9 +80,9 @@ export const validateRegisterInput = withValidationErrors([
     .notEmpty()
     .withMessage("password's required")
     .isLength({
-      min: 8,
+      min: 4,
     })
-    .withMessage("password must be atleast 8 characters long"),
+    .withMessage("password what be atleast 8 characters long"),
   body("lastName").notEmpty().withMessage("last name is required"),
 ]);
 
@@ -102,18 +102,13 @@ export const validateUpdateUserInput = withValidationErrors([
     .withMessage("email's required")
     .isEmail()
     .withMessage("invalid email format")
-    .custom(async (email) => {
+    .custom(async (email, {req}) => {
       const user = await User.findOne({ email });
       if (user && user._id.toString() !== req.user.userId) {
         throw new BadRequestError("email already exists");
       }
     }),
-  body("password")
-    .notEmpty()
-    .withMessage("password's required")
-    .isLength({
-      min: 8,
-    })
-    .withMessage("password must be atleast 8 characters long"),
   body("lastName").notEmpty().withMessage("last name is required"),
 ]);
+
+

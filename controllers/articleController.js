@@ -5,7 +5,9 @@ import User from "../models/authModel.js";
 // import day from "dayjs";
 
 export const getAllArticles = async (req, res) => {
-  const article = await Content.find({createdBy: req.user.userId });
+  const article = await Content.find({createdBy: req.user.userId,
+    description: req.query.search,
+  });
   res.status(StatusCodes.OK).json({article})
 
 }
