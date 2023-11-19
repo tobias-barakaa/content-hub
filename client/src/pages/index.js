@@ -10,8 +10,8 @@ export {default as Admin} from './Admin';
 export {default as EditArticle} from './EditArticle';
 export {default as AllArticles} from './AllArticles'; 
 export {default as AddArticle} from './AddArticle';
-export {default as Navbar} from './Navbar';
 export {default as SearchContainer} from './SearchContainer';
 export {default as ArticleContainer} from './ArticleContainer';
+export {default as Navbar} from './Navbar'
 
 export {default as StatItem} from './StatItem';

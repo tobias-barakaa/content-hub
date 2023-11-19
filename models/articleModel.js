@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import { DURATION } from '../utils/constants.js';
+
 
 
 const contentSchema = new mongoose.Schema(
@@ -9,6 +11,11 @@ const contentSchema = new mongoose.Schema(
     numOfWords: Number,
     numberOfArticles: Number,
     duration: String,
+    duration: {
+      type: String,
+      enum: Object.values(DURATION),
+      default: DURATION.DAY1
+    },
     totalCost: String,
     title: String,
     createdBy: {

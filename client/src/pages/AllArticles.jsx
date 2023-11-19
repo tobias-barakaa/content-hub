@@ -7,10 +7,18 @@ import './AllArticles.css';
 
 
 
-export const loader = async () => {
+export const loader = async ({request}) => {
+  console.log(request.url);
+  const params = Object.fromEntries([
+    ...new URL(request.url).searchParams.entries(),
+  ])
+  console.log(params);
   try {
-    const {data} = await customFetch.get("/articles");
-    return {data}
+    const {data} = await customFetch.get("/articles", {
+      params,
+    });
+    
+    return {data, searchValues:{...params}}
     
   } catch (error) {
     console.error("Error retrieving articles:", error);
@@ -24,10 +32,10 @@ export const loader = async () => {
 
 const AllArticlesContext = createContext();
 const AllArticles = () => {
-  const {data} = useLoaderData()
+  const {data, searchValues} = useLoaderData()
 
   return (
-   <AllArticlesContext.Provider value={{data}}>
+   <AllArticlesContext.Provider value={{data, searchValues}}>
     
     <SearchContainer />
       <ArticleContainer />

@@ -7,6 +7,7 @@ import {
 import mongoose from "mongoose";
 import Content from "../models/articleModel.js";
 import User from "../models/authModel.js";
+import { DURATION } from "../utils/constants.js";
 
 const withValidationErrors = (validateValues) => {
   return [
@@ -42,9 +43,10 @@ export const validateArticleInput = withValidationErrors([
   body("keywords").notEmpty().withMessage("keywords is required"),
   body("numOfWords").notEmpty().withMessage("number of words is required"),
   body("numberOfArticles").notEmpty().withMessage("number of articles is required"),
-  body("duration").notEmpty().withMessage("duration is required"),
   body("totalCost").notEmpty().withMessage("total cost is required"),
   body("title").notEmpty().withMessage("title is required"),
+  body("duration").isIn(Object.values(DURATION)).withMessage("invalid duration"),
+
 ]);
 
 

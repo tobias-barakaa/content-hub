@@ -10,30 +10,31 @@ const Landing = () => {
     <>
       <Navbar />
 
-      <div class="containerr">
-        <div className="left-wing">
-          <header className='heade'>
-            <div>Welcome to Our <span className='space'> Website</span></div>
-          </header>
-          <div>
-            <span>
-              <div className="custom-text">
-                Elevate your online presence by harnessing<br />the power of 
-                social media with our expert<br />
-                marketing strategies and captivating<br /> blog and high-quality article content.
-              </div>
-            </span>
-            <div className='divv'>
-              <Link to='/register' className='buttonn'>CLICK TO GET STARTED</Link>
-            </div>
-          </div>
-        </div>
-        <div className="right-wing">
-          <img src={content} alt="" className='immg' />
-        </div>
+       
+      <div class="container-class">
+  <div className='left' >
+  <span>
+      <div className='expand-online-presence'>
+        Expand your online presence
       </div>
+      <div>
+        with our expert social media strategies,
+      </div>
+      <div>
+        captivating blog content, and high-quality articles.
+      </div>
+    </span>
+    <div>
+      <Link to='/register' class='buttonn'>CLICK TO GET STARTED</Link>
+    </div>
+  </div>
+  </div>
 
-      <LandingLayout />
+<div className='landinglayout'>
+  <LandingLayout />
+</div>
+
+    
     </>
   );
 }

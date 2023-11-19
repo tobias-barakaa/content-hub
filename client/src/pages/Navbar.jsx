@@ -1,10 +1,11 @@
 import React from 'react'
-
+import "./Navbar.css";
 const Navbar = () => {
+
   return (
     <div>
 
-<nav className="navbar">
+{/* <nav className="navbar">
   <h4 className="content-hub">Ox gang</h4>
   <div className="navbar-right">
     <li className='dropdown'>
@@ -29,14 +30,32 @@ const Navbar = () => {
     <span className="vertical-line"></span>
        <li className="get-started">Get Started</li>
   </div>
+      </nav> */}
 
+<div class="navbar">
+  <div class="navbar-logo">
+    Logo
+  </div>
+  <ul class="navbar-items">
+    <li><a href="#">Use Cases</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li class="navbar-dropdown">
+      <a href="#">More</a>
+      <div class="navbar-dropdown-content">
+        <a href="#">Manage media</a>
+        <a href="#">Edit media</a>
+        <a href="#">Connect media</a>
+      </div>
+    </li>
+    <li><a href="#">Sign In</a></li>
+    <li><button class="navbar-get-started">Get Started</button></li>
+  </ul>
+</div>
 
-
-
-      </nav>
       
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;

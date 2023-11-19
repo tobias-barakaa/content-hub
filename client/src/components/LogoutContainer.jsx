@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { userDashboardContext } from '../pages/DashboardLayout';
 import { FaCaretDown, FaUserCircle } from 'react-icons/fa';
 import "./LogoutContainer.css"

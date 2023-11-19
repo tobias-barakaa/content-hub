@@ -27,7 +27,7 @@ const loginDemoUser = async () => {
     "password": "secret123",
   }
   try {
-    await customFetch.post('/login', data);
+    await customFetch.post('/auth/login', data);
     alert('take a look at ');
     navigate('/dashboard')    
   } catch (error) {
@@ -50,7 +50,6 @@ const loginDemoUser = async () => {
         <FormInput type='password' name='password' labelText='Password' defaultValue='tobby123' />
      
         <button type="submit" disabled={isSubmitting}
-        onClick={loginDemoUser}
         >
         {isSubmitting ? 'Loading...' : 'Submit'}
         

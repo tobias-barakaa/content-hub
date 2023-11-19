@@ -1,15 +1,16 @@
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  
-  body {
+body {
     background-color: #f5f5f5;
-    font-family: "Inter", sans-serif;
-  }
-  @media (max-width: 60em) {
-    body {
-      padding: 3rem;
-    }
+    font-family: 'Vina Sans', sans-serif;
   }
   
+
+  button {
+  background-color: #17bbef;
+
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

@@ -1,8 +1,5 @@
 import React from 'react'
 import "./Companies.css";
-import blog from '../assets/companies/echologoblue.png';
-import media from '../assets/companies/mediamasses.png';
-import zelis from '../assets/companies/zelisline.png';
 
 
 const Companies = () => {
