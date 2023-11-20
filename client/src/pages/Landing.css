@@ -85,13 +85,41 @@
 
 } */
 
-.container-class {
-  height: 500px;
-  background-color: #ffffff;
+
+
+
+.expand {
+  font-size: 3.7pc;
+  font-weight: bold;
+  color: black;
+
 }
+
+
+
+.container-class {
+  height: auto;
+  font-family: 'Noto Sans Mandaic', sans-serif;
+  line-height: 1.5;
+  text-align: center; 
+
+}
+.social {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans Mandaic', sans-serif;
+  color: black;
+
+}
+
+.implement {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .left {
-  float: left;
-  width: 50%;
+  margin-top: 156px;
+
 
 }
 .container-class > span > div {
@@ -107,6 +135,8 @@
   font-size: 16px;
 }
 
+
+
 .buttonn {
   display: inline-block;
   background-color: #17bbef;
@@ -119,16 +149,14 @@
   transition: background-color 0.3s ease;
   width: 250px;
   font-size: 15px;
-  ;
+  margin-top: 40px;
 }
 
 .buttonn:hover {
   background-color: #4fd1f8;
 }
 
-.expand-online-presence {
-  font-size: 40px;
-}
+
 
 .container-class > span > div:nth-child(2) {
   font-size: 30px;
@@ -140,6 +168,4 @@
 
 .landinglayout {
   height: auto;
-  background-color:#17bbef;
-  color: white;
 }

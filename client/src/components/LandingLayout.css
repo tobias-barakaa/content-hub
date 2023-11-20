@@ -1,7 +1,5 @@
 .conn {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
+    margin-top: 300px;
+    color: black
   }
