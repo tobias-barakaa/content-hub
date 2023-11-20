@@ -1,0 +1,25 @@
+/* .imgg {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    max-width: 100%; 
+  } */
+
+  .form-image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .form-image {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imgg {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

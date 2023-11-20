@@ -2,23 +2,41 @@ import React from "react";
 import "./LandingLayout.css";
 import Review from "./Review";
 import Footer from "./Footer";
+import cloudina from '../assets/cloudina.png';
+import SecondLayout from "./SecondLayout";
 
 const LandingLayout = () => {
   return (
     <>
-      <div className="conn">
-          <h1>Article and Blog Writing</h1>
-              <p>
-                High-quality blog posts, informative articles, SEO-optimized
-                content, engaging storytelling, and industry-specific expertise
-                are essential ingredients for creating a successful online
-                presence.{" "}
-              </p>
-           
-        </div>
+    <div>
+    <div className="landinglayout">
+  <div className="flex-container">
+    <div className="con-left">
+      <div className="topic">
+        <h1>Article and Blog Writing</h1>
+        <p>
+          High-quality blog posts, informative articles,<br /> SEO-optimized content,
+          engaging storytelling,<br /> and industry-specific <br />expertise are essential
+          ingredients for <br />creating a successful online presence.{" "}
+        </p>
+        <button className="explore">Explore More</button>
+      </div>
+    </div>
+
+    <div className="con-right">
+      <div className="topic1">
+        
+        <img src={cloudina} className='cloudina' alt="image" />
+      </div>
+    </div>
+  </div>
+</div>
+<SecondLayout />
 
 <Footer />
-    </>
+
+    </div>
+</>
   );
 };
 

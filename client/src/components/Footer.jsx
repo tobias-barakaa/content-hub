@@ -5,9 +5,7 @@ import Companies from './Companies';
 const Footer = () => {
   return (
     <div>
-<div>
-    <Companies />
-</div>
+
 <div className='footer'>
 
 <footer>

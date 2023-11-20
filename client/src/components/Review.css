@@ -1,4 +1,4 @@
-.review {
+/* .review {
     margin-top: 1%;
   }
 
@@ -7,7 +7,7 @@
   }
 
 
-  /* css */
+ 
 
   .product-card {
     background-color: #fff;
@@ -35,8 +35,8 @@
     margin-top: -5%;
 
 
-    width: 80px; /* Adjust the width and height as needed */
-    border-radius: 50%; /* This is the magic line for creating a circle */
+    width: 80px; 
+    border-radius: 50%; 
     object-fit: cover;
 }
 
@@ -108,10 +108,10 @@
 .product-ca {
     background-color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;a
     border: 1px solid #ccc;
     padding: 10px;
     width: 30%;
     height: 40vh;
     margin-left: 20px;
-}
+} */

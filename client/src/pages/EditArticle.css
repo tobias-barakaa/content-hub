@@ -1,4 +1,4 @@
-.form-container {
+/* .form-container {
 margin-left: 130px;    
   }
   
@@ -31,7 +31,7 @@ margin-left: 130px;
     cursor: pointer;
   }
   
-  /* Split the form into two parts */
+  
   .form-container form {
     display: flex;
     flex-wrap: wrap;
@@ -42,4 +42,4 @@ margin-left: 130px;
     width: 30%;
   }
 
-  
+   */

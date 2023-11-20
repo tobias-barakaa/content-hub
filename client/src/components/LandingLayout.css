@@ -1,5 +1,47 @@
-.conn {
-    max-width: 1200px;
-    margin-top: 300px;
-    color: black
-  }
+.landinglayout {
+  width: 100%;
+  margin-top: 80px;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.con-left {
+  /* max-width: 50%; */ /* Remove max-width property */
+  width: 1000px;
+
+  color: black;
+  height: 800px;
+  background-color: #f5f5f5;
+  display: flex;
+}
+
+.con-right {
+  /* max-width: 50%; */ /* Remove max-width property */
+  width: 1000px;
+  height: 800px;
+  background-color: #17bbef;
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.topic {
+  margin-left: 30px;
+   margin-top: 200px; 
+}
+
+.topic1 {
+  margin-top: -140px; 
+}
+
+.explore {
+  width: 300px;
+}
+
+.cloudina {
+  width: 400px;
+  height: 500px;
+  margin-left: 120px;
+}

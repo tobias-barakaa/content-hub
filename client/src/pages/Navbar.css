@@ -9,6 +9,7 @@
     font-family: 'Montserrat', sans-serif;
     box-shadow: 10px 10px 20px rgba(79, 209, 248, 0.8), 
     inset 0 0 10px rgba(255, 255, 255, 0.5);
+    
     font-weight: bold;
     
 
@@ -109,5 +110,6 @@
     background-color: #ccc;
     margin: 0 5px; 
   }
-
-  
+.get-started {
+  width: 300px;
+}

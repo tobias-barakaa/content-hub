@@ -10,29 +10,31 @@ const Landing = () => {
     <>
       <Navbar />
 
+       <aside className='aside'>
+
        
       <div class="container-class">
-  <div className='left' >
-  <span>
-      <div className='expand'>
+      <div className='left'>
+  <div className='text-container'>
+    <p className='expand'>
+      <span className='expand-text'>
         Expand your <br /> online presence
-      </div>
-      <div className='social'>
-      <span className='implement'>Implementing</span> expert social media strategies,
-      creating captivating blog content, and producing <br />
-      high-quality articles to attract audience,
-        captivating blog content, and high-quality articles. <br />
-        captivating blog content, and high-quality articles.
-
-        
-      </div>
-        
-    </span>
-    <div>
-      <Link to='/register' class='buttonn'>CLICK TO GET STARTED</Link>
-    </div>
+      </span>
+    </p>
   </div>
+  <div className='social'>
+    <span className='implement'>Implementing</span> expert social media strategies,
+    creating captivating blog content, and producing <br />
+    high-quality articles to attract an audience,
+    captivating blog content, and high-quality articles. <br />
+    captivating blog content, and high-quality articles.
   </div>
+  <div>
+    <Link to='/register' className='buttonn'>CLICK TO GET STARTED</Link>
+  </div>
+</div>
+  </div>
+  </aside>
 
 <div className='landinglayout'>
   <LandingLayout />

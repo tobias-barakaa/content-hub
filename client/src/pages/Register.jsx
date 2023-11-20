@@ -6,6 +6,7 @@ import { Form, redirect } from "react-router-dom";
 import customFetch from "../utils/customFetch";
 import formimage from "../assets/form-image.png"
 import SubmitButton from "../components/SubmitButton";
+import register from "../assets/register.png";
 
 
 export const action = async ({ request }) => {
@@ -21,55 +22,44 @@ export const action = async ({ request }) => {
 };
 
 const Register = () => {
-  
-  
 
 
+return (
+  <div className="form-image container">
+  <img src={register} alt="formimage" />
 
-
-
-
-
-
-  return (
-    <div className="form-image">
-<img src={formimage} alt="formimage" className="imgg" /> 
-    
-    <div className="global">
-      <div class="signup-container">
-        <h2>Register to Ox-gang</h2>
-        <Form method="post">
-          <FormInput
-            type="text"
-            name="name"
-            labelText="First Name"
-            defaultValue="tobby baraka"
-          />
-          <FormInput
-            type="text"
-            name="lastName"
-            labelText="Last Name"
-            defaultValue="baraka karibu"
-          />
-          <FormInput
-            type="email"
-            name="email"
-            labelText="Email"
-            defaultValue="tobby@gmail.com"
-          />
-          <FormInput
-            type="password"
-            name="password"
-            labelText="Password"
-            defaultValue="tobby12343"
-          />
-          <SubmitButton />
-        </Form>
-
-        <Link to="/login">Login</Link>
+  <div className="signup-container">
+    <Form method="post">
+      <div className="input-group">
+        <FormInput
+          type="text"
+          name="name"
+          labelText="First Name"
+        />
+        <FormInput
+          type="text"
+          name="lastName"
+          labelText="Last Name"
+        />
       </div>
-    </div>
-    </div>
+
+      <FormInput
+        type="email"
+        name="email"
+        labelText="Email"
+      />
+
+      <FormInput
+        type="password"
+        name="password"
+        labelText="Password"
+      />
+
+      <SubmitButton />
+    </Form>
+    <Link to='/login'>Login</Link>
+  </div>
+</div>
 
   );
 };

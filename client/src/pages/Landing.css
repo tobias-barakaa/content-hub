@@ -85,42 +85,25 @@
 
 } */
 
+.aside {
+  height: 400px;
+  margin-top: 124px;
+}
 
-
+.expand-text {
+  font-size: 3.7pc;
+  color: black;
+}
 
 .expand {
-  font-size: 3.7pc;
   font-weight: bold;
   color: black;
-
-}
-
-
-
-.container-class {
-  height: auto;
-  font-family: 'Noto Sans Mandaic', sans-serif;
-  line-height: 1.5;
-  text-align: center; 
-
-}
-.social {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: 'Noto Sans Mandaic', sans-serif;
-  color: black;
-
-}
-
-.implement {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .left {
-  margin-top: 156px;
-
-
+  
+  font-family: 'Noto Sans Mandaic', sans-serif;
+  text-align: center; 
 }
 .container-class > span > div {
   line-height: 1.5;
@@ -134,8 +117,6 @@
 .container-class > span > div:nth-child(3) {
   font-size: 16px;
 }
-
-
 
 .buttonn {
   display: inline-block;
@@ -155,8 +136,6 @@
 .buttonn:hover {
   background-color: #4fd1f8;
 }
-
-
 
 .container-class > span > div:nth-child(2) {
   font-size: 30px;

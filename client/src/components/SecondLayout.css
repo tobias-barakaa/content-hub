@@ -1,0 +1,12 @@
+.second-right {
+    width: 800px;
+    height: auto;
+}
+
+.second-left {
+    margin-top: 100px;
+    width: 800px;
+    height: auto;
+    align-items: center; /* Center content vertically */
+    color: black;
+}

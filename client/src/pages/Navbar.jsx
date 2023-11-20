@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Navbar.css";
+import Landing from './Landing';
 const Navbar = () => {
 
   return (
+    <>
     <div>
 
 {/* <nav className="navbar">
@@ -49,12 +51,15 @@ const Navbar = () => {
       </div>
     </li>
     <li><a href="#">Sign In</a></li>
-    <li><button class="navbar-get-started">Get Started</button></li>
+    <li><button class="get-started">Get Started</button></li>
   </ul>
 </div>
 
       
     </div>
+    
+
+    </>
   )
 }
 

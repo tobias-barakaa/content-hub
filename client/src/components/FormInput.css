@@ -1,48 +1,4 @@
-.form-image {
-  display: flex;
-  margin-top: 5%;
-}
 
-.imgg {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  max-width: 100%; 
-}
-
-
-
-h2 {
-  color: #000000;
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group input:focus {
-  border-color: #aaa;
-}
-
-.form-group input.is-clicked {
-  background-color: blue;
-}
-
-label {
-  font-weight: 300;
-  margin-bottom: 6px;
-}
-
-input {
-  width: 200%; 
-  padding: 10px;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  height: 100%; 
-}
 
 
 @media screen and (max-width: 768px) {
