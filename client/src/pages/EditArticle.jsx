@@ -31,27 +31,28 @@ const EditArticle = () => {
   const loading = navigation.state === "loading"
 
   return (
-    <div class="form-container">
+    <div className="form-container">
     <h2>Update Data</h2>
     <Form method='post'>
-      <div class="form-group">
+
+      <div className="form-group title-keywords">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title"
         defaultValue={article.title}
          />
-      </div>
-      <div class="form-group">
-        <label for="keywords">Keywords:</label>
+       <label for="keywords">Keywords:</label>
         <input type="text" id="keywords" name="keywords"
          defaultValue={article.keywords} />
       </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <textarea id="description" 
-        name="description" defaultValue={article.description} />
-      </div>
-      <div class="form-group">
-      <label for="duration">Duration:</label>
+
+
+      
+        <label for="description" className='label-desc'>Description:</label>
+        <textarea  
+        name="description" className='discription' defaultValue={article.description} />
+    
+      <div className="form-group">
+      <label for="duration" className='label-desc' >Duration:</label>
       <select
         id="duration"
         name='duration'
@@ -59,30 +60,30 @@ const EditArticle = () => {
         
       >
         {[1, 2, 3, 4, 5, 6, '1 week'].map((value) => (
-          <option key={value} value={typeof value === 'number' ? `${value} days` : value}>
+          <option className='durration' key={value} value={typeof value === 'number' ? `${value} days` : value}>
             {typeof value === 'number' ? `${value} days` : value}
           </option>
         ))}
       </select>
       </div>
-      {/* <div class="form-group">
+      {/* <div className="form-group">
         <label for="duration">Duration:</label>
         <input type="text" id="duration" name="duration" value="2 days" />
       </div> */}
-      <div class="form-group">
+      <div className="form-group">
         <label for="numOfWords">Number of Words:</label>
         <input type="number"
         defaultValue={article.numOfWords}
         id="numOfWords" name="numOfWords" /> 
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label for="numberOfArticles">Number of Articles:</label>
         <input type="number" 
         id="numberOfArticles" name="numberOfArticles" 
         defaultValue={article.numberOfArticles}
          />
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label for="totalCost">Total Cost:</label>
         <input type="number" 
         id="totalCost" name="totalCost" 
@@ -90,7 +91,7 @@ const EditArticle = () => {
          />
        
       </div>
-      <div class="form-group">
+      <div className="form-group">
      
       <button type="submit" id="update"
       disabled={loading}

@@ -9,6 +9,11 @@
     justify-content: center;
     display: flex;
     margin-top: 80px;
+    border-radius: 0%;
+  }
+
+  .right-form {
+    margin-left: 2px;
   }
 
   @media screen and (max-width: 768px) {

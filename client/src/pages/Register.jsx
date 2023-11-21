@@ -40,6 +40,7 @@ return (
           type="text"
           name="lastName"
           labelText="Last Name"
+          className="right-form"
         />
       </div>
 

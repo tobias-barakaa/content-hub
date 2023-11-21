@@ -73,59 +73,12 @@ const Quantity = ({ formData, setFormData }) => {
       totalCost: total,
     }));
   }
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   return (
     <div className="payment-form">
       <label htmlFor="num-words">Number of Words:</label>
+      <div className='form-group'>
       <input
         type="number"
         id="numOfWords"
@@ -160,7 +113,7 @@ const Quantity = ({ formData, setFormData }) => {
         }}
         required
       />
-
+</div>
       <div className="total-cost-box">
         <p>Total Cost:</p>
         <p>${totalCost}</p>

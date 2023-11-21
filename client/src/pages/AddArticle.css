@@ -12,12 +12,13 @@
 }
 
 .input-partition.active {
-  background-color: black;
+  background-color: #007bff;
   color: white;
 }
 
 .order {
-  margin-left: 90px;
+  margin-left: 88px;
+  margin-top: 72px;
 }
 
 /* Media query for smaller screens */
@@ -38,7 +39,7 @@
 }
 
 .input-partition.active {
-  background-color: #000000;
+  background-color: #007bff;
   color: white;
 }
 
@@ -110,5 +111,13 @@ textarea[type="text"] {
 
 }
 
+.next-button {
+  background-color: #007bff;
+  width: 90px;
+}
 
+.buton {
+  background-color: #007bff;
+  width: 90px;
+}
 

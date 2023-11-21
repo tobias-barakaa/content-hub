@@ -20,20 +20,23 @@ const Admin = () => {
   const { users, articles } = useLoaderData();
 
   return (
-    <div>
+    <>
       <h2>Admin page</h2>
+    <div className='everything'>
+
       <StatItem title='current users' count={users} 
-      color='#e9b949 ' 
-      icon={<FaSuitcaseRolling />}
+      icon={<FaSuitcaseRolling className='icons' />}
+      
       />
 
-    <StatItem title='Total Articles' 
+    <StatItem title='Total Articles'
+    className='stat-item'
     count={articles} 
-      color='#e9b949 ' 
       icon={<FaSuitcaseRolling />}
       />
-      {/* Render the rest of your component */}
+      
     </div>
+    </>
   );
 };
 

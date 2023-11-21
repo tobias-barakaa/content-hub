@@ -4,7 +4,7 @@ body {
   
   
   .articles {
-    border-radius: 8px;
+    border-radius: 4px;
    
   }
   
@@ -81,6 +81,7 @@ body {
   .duration {
     font-weight: bold;
     font-size: 19px;
+    color: #17bbef;
   }
 
   .duration-style {
@@ -92,3 +93,19 @@ body {
     font-size: 19px;
 
   }
+
+
+  .title {
+    font-weight: bold;
+    font-size: 32px;
+    color: #007bff;
+
+  }
+
+  .description {
+    color: #007bff;
+  }
+
+  .desc {
+    color: black;
+}

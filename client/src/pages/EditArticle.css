@@ -1,5 +1,5 @@
-/* .form-container {
-margin-left: 130px;    
+.form-container {
+margin-left: 100px;    
   }
   
   .form-container h2 {
@@ -9,6 +9,7 @@ margin-left: 130px;
   
   #description, #title, #keywords, #duration, #numOfWords, #numberOfArticles, #totalCost {
     height: 50px;
+    width: 520px;
   }
   
   
@@ -42,4 +43,28 @@ margin-left: 130px;
     width: 30%;
   }
 
-   */
+
+  .title-keywords {
+    display: flex;
+    margin-left: 30px;
+  }
+  
+
+  #title, #keywords {
+    width: 400px;
+
+  }
+
+  .discription {
+    width: 550px;
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+
+  .label-desc {
+    margin-left: 60px;
+  }
+
+  .durration {
+    margin-left: 23px;
+  }

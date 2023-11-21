@@ -23,7 +23,7 @@ const links = [
     icon: <ImProfile />,
   },
   {
-    text: 'Review',
+    text: 'Admin',
     path: 'admin',
     icon: <MdAdminPanelSettings />,
   },

@@ -44,13 +44,14 @@ const OrderArticle = ({ formData, setFormData }) => {
   return (
     <div>
       <div>
-        <div className="description-form">
+        <div className="description">
           <form>
             <label htmlFor="title">Title:</label>
             <input
               type="text"
               id="title"
               name="title"
+              className='tittle'
               value={formData.title}
               onChange={(e) => setFormData({...formData, title: e.target.value})}
             />

@@ -88,21 +88,21 @@ const AddArticle = () => {
         ))}
       </div>
 
-      <div>
         <div>
           {pageDisplay()}
         </div>
         <Form>
           <div className='navigate'>
             <button
-              className={`${page === 0 ? 'button-container' : ''}`}
+              className={`${page === 0 ? 'next-button' : ''}`}
               disabled={page === 0}
+              
               onClick={handlePrevClick}
             >
               {page === 0 ? '' : 'Prev'}
             </button>
             <button
-            
+              className='next-button'
               
               onClick={page === FormTitles.length - 1 ? handleSubmit : handleNextClick}
 type={page === FormTitles.length - 1 ? "submit" : "button"}
@@ -114,7 +114,6 @@ type={page === FormTitles.length - 1 ? "submit" : "button"}
             </button>
           </div>
         </Form>
-      </div>
     </div>
   );
 };

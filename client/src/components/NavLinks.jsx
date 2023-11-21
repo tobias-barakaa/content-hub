@@ -20,6 +20,7 @@ const NavLinks = () => {
           >
              <NavLink
             to={path}
+            className={`text`}
             key={text}
              // onClick={isBigSidebar ? null : toggleSidebar}
             end

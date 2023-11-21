@@ -2,7 +2,7 @@ import React from "react";
 import "./FormInput.css";
 
 
-const FormInput = ({ type, name, labelText, defaultValue, onChange }) => {
+const FormInput = ({ type, name, labelText, defaultValue, onChange, className  }) => {
   return (
     <div>
 
@@ -18,6 +18,7 @@ const FormInput = ({ type, name, labelText, defaultValue, onChange }) => {
           defaultValue={defaultValue || ""}
           onChange={onChange}
           required
+          className={className}
         />
       </div>
     </div>

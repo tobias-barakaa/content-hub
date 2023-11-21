@@ -19,11 +19,10 @@ const Article = ({
     <header className='card-container'>
       {/* Left section */}
       <div className='left-section'>
-        <h2>{title}</h2>
+        <h1 className='title'>Title:</h1> <span className=''>{title}</span>
         <p>{keywords}</p>
         <div className='description'>
-          <p>{description}</p>
-          <button className='read-more'>Read More</button>
+          <h6 className='description'>Descripiton:</h6> <span className='desc'>{description}</span>
         </div>
       </div>
   
@@ -34,10 +33,11 @@ const Article = ({
       <div className='center-section'>
         <div><span className='duration'>Duration:  </span>{duration}</div>
         <span className='numOfWords'>Number of Words:
-          </span><ArticleInfo text={numOfWords} />
+          </span>
+          <div>{numOfWords}</div>
         <span className='numOfWords'>Number of Articles
           </span> 
-          <ArticleInfo text={numberOfArticles} />
+          <div>{numberOfArticles}</div>
 
       </div>
   

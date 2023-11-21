@@ -3,6 +3,7 @@ import { BigSidebar, SmallSidebar, Navbar } from "../components";
 import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import "./DashboardLayout.css";
 import customFetch from "../utils/customFetch";
+import { FaCaretDown, FaUserCircle } from "react-icons/fa";
 
 export const loader = async () => {
   try {
@@ -16,9 +17,21 @@ export const loader = async () => {
 const DashboardContext = createContext();
 
 const DashboardLayout = () => {
-  const navigate = useNavigate();
-  const { user } = useLoaderData();
+  const [showLogout, setShowLogout] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+
+  const navigate = useNavigate();
+
+
+const [showDropdown, setShowDropdown] = useState(false);
+
+
+
+const navigateToProfile = () => {
+  
+  navigate('/dashboard/profile');
+};
+  const { user } = useLoaderData();
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -29,13 +42,52 @@ const DashboardLayout = () => {
     await customFetch.get("/logout");
   };
 
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+  
+
   return (
+    <>
+
+
+<div className="dropdown-container">
+  <h2 className="container">Ox-Gang</h2>
+  <div className="nav-bar" />
+  <div className="horizontal-line"></div>
+  <div className="dashboard">
+    <div className="nav-center">
+      {/* Your existing content */}
+    </div>
+    <div className="profile-wrapper">
+      <div type="button" className="profile-button" onClick={toggleDropdown}>
+        {user?.avatar ? (
+          <img src={user.avatar} alt="avatar" className="image" />
+        ) : (
+          <FaUserCircle />
+        )}
+        {user?.name}
+        <FaCaretDown />
+      </div>
+      {showDropdown && (
+        <div className="dropdown">
+          <div className="dropdown-item" onClick={logoutUser}>
+            Logout
+          </div>
+          <div className="dropdown-item" onClick={navigateToProfile}>
+            Profile
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+
     <DashboardContext.Provider
       value={{ 
         user,
-         showSidebar, 
          toggleSidebar, 
-         logoutUser }}
+          }}
     >
       {/* <div className='container nav-center'>
       
@@ -52,25 +104,25 @@ const DashboardLayout = () => {
 </div> */}
 
      
+   
 
-      <div class="horizontal-line" />
-
-      <div className="dashboard">
-        <div></div>
+    
+     
+       
         <main className="dashboard">
           <SmallSidebar />
           <div className="bigsidebar">
             <BigSidebar />
           </div>
-          <Navbar />
           <div>
             <div className="">
               <Outlet context={{ user }} />
             </div>
           </div>
         </main>
-      </div>
+     
     </DashboardContext.Provider>
+    </>
   );
 };
 export const userDashboardContext = () => useContext(DashboardContext);

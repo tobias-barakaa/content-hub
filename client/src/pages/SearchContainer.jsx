@@ -27,7 +27,7 @@ const debounce = (onChange) => {
 
   return (
     <div>
-      <form>
+      <form className="form-search">
         <input
           type="search"
           id="search"
@@ -43,10 +43,12 @@ const debounce = (onChange) => {
         />
 
         <label>Search by Sorting Order</label>
+        <div className="form-inputt" >
         <select
           id="display"
           name="display"
           labelText="Display"
+          className="display"
           defaultValue={sort}
           list={[...Object.values(ARTICLE_DISPLAY)]}
           onChange={(e) => {
@@ -55,11 +57,18 @@ const debounce = (onChange) => {
         >
           <option value="newest">newest</option>
           <option value="oldest">oldest</option>
+         
         </select>
-        <SubmitButton />
-        <Link to="/dashboard/all-articles" className="btn btn-block form-btn">
-          Reset Search Values
-        </Link>
+        <div  className="form-bttn">
+        <button >Search</button>
+        {/* <button to="/dashboard/all-articles">
+        Reset Search
+
+        </button> */}
+       
+        </div>
+
+        </div>
       </form>
     </div>
   );

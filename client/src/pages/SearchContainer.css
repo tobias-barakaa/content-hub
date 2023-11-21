@@ -1,8 +1,7 @@
 .search {
+  margin-top: 90px;
   width: 700px;
-  padding: 20px;
   border: 1px solid #ccc;
-  margin-left: 90px;
 }
 
 input[type="text"] {
@@ -12,10 +11,12 @@ input[type="text"] {
 }
 
 select {
-  width: 100%;
+  width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  height: 50px;
+
 }
 
 input[type="submit"] {
@@ -25,4 +26,37 @@ input[type="submit"] {
   color: #fff;
   border: 1px solid #007bff;
   border-radius: 5px;
+}
+
+option {
+  height: 300px;
+}
+
+.btn-block {
+  width: 200px;
+}
+
+.form-search {
+  margin: auto;
+  margin-left: 100px;
+
+
+}
+
+.form-inputt {
+  display: flex;
+}
+
+.sub-buton {
+  margin-top: -4px;
+  width: 30px;
+}
+
+.form-bttn {
+  background-color: #17bbef;
+   width: 300px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
