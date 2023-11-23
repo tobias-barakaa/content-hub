@@ -7,10 +7,13 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://52.86.222.134/:4000/api',
+        target: 'http://52.86.222.134:4000/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
 })
+
+
+
