@@ -1,5 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 
+// error check
 export class NotFoundError extends Error{
     constructor(message) {
         super(message)
