@@ -14,7 +14,7 @@ import {
   validateIdParam,
 } from "../middleware/validationmiddleware.js";
 import { checkForTestUser } from "../middleware/authMiddleware.js";
-
+// router post
 router
 .route("/")
 .get(getAllArticles)
